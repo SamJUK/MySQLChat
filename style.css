@@ -1,0 +1,138 @@
+/*CSS RESET BY MEYERWEB | http://meyerweb.com/eric/tools/css/reset/*/html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+body{
+    font-family: sans-serif;
+}
+.button{
+    border: 3px solid rgba(255,50,50,.5);
+    background-color: rgba(0,0,0,.1);
+    padding: 5px;
+    margin: 15px 10px;
+    display: inline-block;
+}
+.button a{
+    cursor: hand;
+}
+/***********************
+    Header Styling
+************************/
+#header{
+    height: 35px;
+    width: 100%;
+    background-color: #F2F2F2;
+    text-align: center;
+    font-family: sans-serif;
+    padding-top: 15px;
+}
+#header #left{
+    width: 33%;
+    float: left;
+}
+#header #middle{
+    width: 33%;
+    float: left;
+}
+#header #right{
+    width: 33%;
+    float: right;
+}
+#header #right li{
+    display: inline;
+}
+#header #right a{
+    text-decoration: none;
+    color: black;
+}
+
+/***********************
+    Index page container!
+***********************/
+#index #container{
+    text-align: center;
+    margin-top: 25px;
+}
+
+/*************************
+    Room List Styling!
+**************************/
+#roomContainer{
+    width: 80%;
+    margin: auto;
+}
+#roomContainer a{
+    color: inherit;
+    text-decoration: none;
+}
+#roomContainer .room{
+    height: 300px;
+    width: 400px;
+    text-align: center;
+    background-color: #fdf8f8;
+    border-radius: 7px;
+    display: inline-block;
+    margin: 10px 20px;
+    border: 1px solid rgba(0,0,0,.3);
+}
+#roomContainer .room:hover{
+    cursor: hand;
+}
+#roomContainer .room #name{
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    background-color: #F2F2F2;
+    padding: 10px;
+}
+#roomContainer .room #users{
+    display: block;
+}
+#roomContainer .room img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin: 20px 0px;
+    border: 1px solid rgba(0,0,0,.3);
+}
+/************************
+    Room Page Styling!
+************************/
+#messagesIframe{
+    height:84%;
+    width: 100%;
+}
+input[type=text]{
+    height: 9.9%;
+    width:94%;
+}
+input[type=submit]{
+    height: 9.9%;
+    width:5%;
+}
+
+/******************************
+    Messages Page Styling!
+******************************/
+#messages{
+    margin: 20px;
+    overflow: hidden;
+}
+#messages .message{
+    width: 100%;
+    display: inline-block;
+    padding: 5px;
+}
+.message span{
+    max-width: 20%;
+    border-radius: 7px;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-family: sans-serif;
+    word-wrap: break-word;
+}
+.message .inbound{
+    float: left;
+    background-color: #71f442;
+}
+.message .outbound{
+    float: right;
+    background-color: #e5e5e5;
+}
