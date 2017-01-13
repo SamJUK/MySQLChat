@@ -5,14 +5,17 @@
 <html>
     <head>
         <link href="style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     </head>
     <body>
-        <?php include('header.php') ?>
-        <form id="registerForm" method="post" action="confirmation.php"> 
-            <input id="user" name="user" placeholder="Username"></input>
-            <input id="email" name="email" placeholder="Email"></input>
-            <input id="pass" name="pass" type="password" placeholder="Password"></input>
-            <input id="submit" type="submit"></input>
-        </form>
+        <?php
+            include('header.php');
+            if(!isSet($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != 1){
+                include('views/register.php');
+            }else{
+                include('views/alreadyLoggedIn.php');
+            };
+        ?>       
+        <script src="main.js"></script>
     </body>
 </html>

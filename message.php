@@ -8,6 +8,7 @@
 <html>
     <head>
         <link href="style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <meta http-equiv="refresh" content="10">
     </head>
     <body id="messages"><!--

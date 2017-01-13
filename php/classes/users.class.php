@@ -51,7 +51,7 @@ class Users{
     function LoggingOut(){
         if (isSet($_GET['logout'])){
             session_destroy();
-            header("Location: index.php");
+            header("Location: rooms.php");
         }
     }
 

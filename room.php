@@ -11,12 +11,16 @@
     <head>
         <title>El Giggle</title>
         <link href="style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     </head>
     <body>
          <?php include('header.php') ?>
         <iframe id="messagesIframe" src="message.php?id=<?php echo $_GET['id']; ?>"></iframe>
-        <input id="userinput" type="text" onKeyDown="MsgKeyDown(event)"></input>
-        <input type="submit" onClick="sendMessage()"></input>
+        <div id="input">
+            <input id="userinput" type="text" onKeyDown="MsgKeyDown(event)"></input>
+            <input type="submit" onClick="sendMessage()" value="Send"></input>
+        </div>
     <script src="main.js"></script>
+    <script>setTimeout(function(){document.getElementById('messagesIframe').contentWindow.scrollTo( 0, 999999 );},500);</script>
     </body>
 </html>

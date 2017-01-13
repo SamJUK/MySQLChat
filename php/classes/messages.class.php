@@ -85,6 +85,16 @@ class messages {
         return $result['name'];
     }
 
+    function getRoomImg($db, $room){
+        $sql = 'SELECT img FROM rooms WHERE id = :room LIMIT 1';
+        $qry = $db->prepare($sql);
+        $qry -> bindParam ( ':room' ,$room, PDO::PARAM_INT );
+        $qry -> execute();
+        $result = $qry -> fetch(PDO::FETCH_ASSOC);
+
+        return $result['img'];
+    }
+
     function getUserName($db, $user){
         $sql = 'SELECT username FROM users WHERE id = :user LIMIT 1';
         $qry = $db->prepare($sql);

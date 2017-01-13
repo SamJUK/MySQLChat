@@ -16,6 +16,10 @@ function sendMessage(){
     input.value = "";
     var ifrm = document.getElementById('messagesIframe');
     ifrm.src = ifrm.src;
+
+    setTimeout(function(){
+        document.getElementById('messagesIframe').contentWindow.scrollTo( 0, 999999 );
+    },500);
 };
 
 function joinRoom(){
@@ -33,7 +37,7 @@ function joinRoom(){
 }
 
 function leaveRoom(){
-    var roomList = document.getElementById('roomList');
+    var roomList = document.getElementById('roomListSelect');
     var roomid = roomList[roomList.selectedIndex].dataset.roomid;
 
     var xmlhttp = new XMLHttpRequest();
@@ -69,5 +73,15 @@ function MsgKeyDown(event){
         case !event.altKey && !event.ctrlKey && !event.shiftKey && event.key == "Enter":
             sendMessage();
             break;
+    }
+}
+
+function validateEmail(input){
+    var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if(!regex.test(input.value)){
+        input.style.border = "2px solid red";
+    }else{
+        input.style.border = "1px solid rgba(0,0,0,.3)";
     }
 }
