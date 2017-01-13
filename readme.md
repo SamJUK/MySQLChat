@@ -1,11 +1,19 @@
+# MySQLChat
+
 Lol. The fuck did i make this for?
 
-'Instant' chat messaging based around PHP and MySQL and using a auto refreshing Iframe
+'Instant' chat messaging based around PHP and MySQL and AJAX.
 
-No Sockets.IO Pure PHP, MySQL and Javascript based messaging service.
+## Licensing
 
+This work is free. You can redistribute it and/or modify it under the
+terms of the Do What The Fuck You Want To Public License, Version 2. See the LICENSE file for more details.
 
-#TODO
+![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)
+
+Copyright © 2017 Sam James <sam@samdjames.uk>
+
+## TODO
 * Validate Inputs
 * Realtime form validation
 * Exception Catching
